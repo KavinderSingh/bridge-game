@@ -1,7 +1,35 @@
 body
 {       
-    background-color: white;
+    /* background-color: mediumslateblue;
+    transition: 3000ms ease-in-out; */
+
+    animation: colorchange 20s infinite; 
+      -webkit-animation: colorchange 20s infinite; /* Chrome and Safari */
+    }
+
+@keyframes colorchange
+{
+    0%   {background: maroon;}
+    25%  {background: rosybrown;}
+    50%  {background: royalblue;}
+    75%  {background: gray;}
+    100% {background: maroon;}
+
+    /* 0%  {background: gray;}
+    50% {background: black;}
+    100%  {background: gray;} */
 }
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+    0%   {background: red;}
+    25%  {background: yellow;}
+    50%  {background: blue;}
+    75%  {background: green;}
+    100% {background: red;}
+
+}
+
 canvas
 {   display: flex;
     margin: auto;
@@ -12,7 +40,6 @@ canvas
 #grid {
     display: grid;
     grid-template-columns: auto;
-    /* background-color: aquamarine; */
     padding: 10px;
     width: 10%;
     display: flex;
@@ -29,16 +56,21 @@ canvas
     font-size: 30px;
     text-align: center;
     padding: 4vh;
-    margin-bottom: unset;
+    
     
 }
 
 #box {
     display: flex;
     margin: auto;
-    background-color: teal;
-    width: 10.4vh;
-    height: 9.2vh;
-    margin-top: unset;
-
+    width: 50em;
+    padding-right: 4vh;
+    padding-right: 10px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: linear-gradient(150deg, #3498db, #8e44ad);
 }

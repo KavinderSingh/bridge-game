@@ -33,15 +33,15 @@ function movt(event) {
         i = i + 1;
         var div = document.getElementById(i);
 
-        if (i == 10) {
+        if (i == 8) {
             div.style.backgroundColor = "white";
             document.getElementById(i-1).style.backgroundColor = "blue";
             alert('you win');
             return;
         }
 
-        if (i > 10) {
-            i = 10;
+        if (i > 8) {
+            i = 8;
         }
 
         if (div != null) {
